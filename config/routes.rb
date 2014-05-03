@@ -1,4 +1,4 @@
 Magpie::Application.routes.draw do
-  get '/lists/:id', to: 'lists#show', as: :list
+  resources :lists, only: [:index, :show,:new]
   root to: 'lists#index'
 end
